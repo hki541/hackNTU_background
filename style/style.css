@@ -1,0 +1,197 @@
+html,body{
+	height:100%;
+	width: 100%;
+	margin:0 0 0 0px;
+}
+
+body {
+	height:inherit;
+	width:inherit;
+}
+
+
+
+.Geo_background{
+	height: 800px !important;
+    width: 100%;
+    margin: 0px;
+	background-image: url(http://xfounder.com/wp-content/uploads/2015/12/%E7%BA%BD%E7%BA%A6landscape1.jpg);
+	z-index: 0;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;	
+}
+
+.wrapper{
+	height: 800px !important;
+    width: 100%;
+	z-index: 3;
+	overflow-y:auto;
+	overflow-x:auto;
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.68) 40%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0.68) 40%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.68) 40%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+
+
+
+.mark1{
+	position:absolute;
+	z-index:15;
+	top:20%;
+	width:100%;
+	margin:0 auto;
+	text-align: center;
+	font-size:70px;	
+	
+	letter-spacing:3px;
+	font-family: "Ms Sans Serif";
+	color: #EE9A00;
+}
+
+.mark_sub{
+	position:absolute;
+	z-index:15;
+	top:35%;
+	width:100%;
+	margin:0 auto;
+	text-align: center;
+	font-size:60px;	
+	letter-spacing:3px;
+	font-family: "Ms Sans Serif";
+	color: #483D8B;
+}
+
+.input-group {
+	margin: 0px 0px;
+	top:20px;
+
+}
+.form-control{
+	font-size: 30px !important;
+}
+
+.searchBar_wrapper{
+	top:40px;
+	margin: 0px 40px;
+	z-index: 2;
+}
+
+.weatherList_wrapper{
+	margin: 40px 40px;
+	z-index: 2;
+}
+
+td, th {
+	vertical-align: middle !important;
+	text-align: center !important;
+	font-size: 30px;
+}
+
+td:first-of-type {
+	height: 200px;
+	width: 250px;
+}
+
+.container {
+	height:inherit;
+	margin:0px;
+	padding: 0px !important;
+	width:  100% !important;
+}
+
+.weather_background{
+	//height: 1000px !important;
+	//height: :100%;
+	overflow-y: auto;
+    width: 100%;
+    margin: 0px ;
+	background-image: url(http://pic.pimg.tw/hunghaowei/1353938469-3998405203.jpg);
+	z-index: 1;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;	
+}
+
+
+/**
+ * The geosuggest module
+ */
+
+.top-buffer {
+	margin-top: 20px;
+}
+
+.geosuggest {
+	font-size: 18px;
+	font-size: 1rem;
+	position: relative;
+	width: 50%;
+	margin: 0em auto;
+	text-align: left;
+	z-index: 10;
+}
+.geosuggest__input {
+	position: relative;
+	margin-top: 50%;
+	padding-top:;
+	width: 100%;
+	border: 2px solid transparent;
+	box-shadow: 0 0 1px #3d464d;
+	padding:10px;
+    font-size: 30px;
+
+	/*-webkit-transition: border 0.2s, box-shadow 0.2s;
+	 transition: border 0.2s, box-shadow 0.2s;*/
+}
+.geosuggest__input:focus {
+	border-color: #267dc0;
+	box-shadow: 0 0 0 transparent;
+}
+.geosuggest__suggests {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	max-height: 25em;
+	padding: 0;
+	margin-top: -1px;
+	background: #fff;
+	border: 2px solid #267dc0;
+	border-top-width: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	list-style: none;
+	z-index: 5;
+	-webkit-transition: max-height 0.2s, border 0.2s;
+	transition: max-height 0.2s, border 0.2s;
+}
+.geosuggest__suggests--hidden {
+	max-height: 0;
+	overflow: hidden;
+	border-width: 0;
+}
+
+/**
+ * A geosuggest item
+ */
+.geosuggest-item {
+	font-size: 18px;
+	font-size: 1rem;
+	padding: .5em .65em;
+	cursor: pointer;
+}
+.geosuggest-item:hover, .geosuggest-item:focus {
+	background: #f5f5f5;
+}
+.geosuggest-item--active {
+	background: #267dc0;
+	color: #fff;
+}
+.geosuggest-item--active:hover, .geosuggest-item--active:focus {
+	background: #ccc;
+}
