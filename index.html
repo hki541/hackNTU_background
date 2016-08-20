@@ -1,19 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>TSP 旅行的好幫手</title>
-		<link rel="stylesheet" href="style/normalize.css">
-		<link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<script src="https://maps.googleapis.com/maps/api/js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2y0A2uCVMLVP4W3Qg2c5AvhfqyIHQRdo&libraries=places"></script>
-		<!--[if It IE 9]>
-		<script src = "html5shiv.js.html"></script>
-		<![endif]-->
-	</head>
-	<body>
-			<div class="container"></div>
-	</body>
-	<script src="/bundle.js"></script>
+<html>
+  <head>
+
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2y0A2uCVMLVP4W3Qg2c5AvhfqyIHQRdo&libraries=places"></script>
+    <script type="text/javascript">
+        
+        function insert(){
+            if(window.XMLHttpRequest){
+                xmlhttp = new XMLHttpRequest();
+            }else{
+                xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+            };
+
+            xmlhttp.onreadystatechange = function(){
+                if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+                    document.getElementById('message').innerHTML = xmlhttp.responseText;
+                };  
+            };
+
+            parameters = 'insert_text='+document.getElementById('insert_text').value;
+
+            xmlhttp.open('GET','ajax_posting_data.php',true);
+            xmlhttp.setRequestHeader('Access-Control-Allow-Origin', 'application/x-www-form-urlencoded');
+            xmlhttp.send(parameters);
+        };
+
+    </script>
+    
+  </head>
+  <body>
+    <div class="container"></div>
+  </body>
+  <script src="/bundle.js"></script>
 </html>

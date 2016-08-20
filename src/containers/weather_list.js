@@ -28,10 +28,9 @@ class WeatherList extends Component {
     );
     });
   }
-
+// {this.props.weather.map(this.renderWeather)}
   render() {
     return (
-
       <table className="table table-hover">
         <thead>   
           <tr>
@@ -45,6 +44,7 @@ class WeatherList extends Component {
 
           {this.renderWeather()}
          
+
         
         </tbody>
       </table>
@@ -52,6 +52,10 @@ class WeatherList extends Component {
   }
 }
 
+//weather: weather
+//function mapStateToProps({weather}) {
+//  return {weather}
+//}
 
 function mapStateToProps(state) {
   return {weather: state.weather}
